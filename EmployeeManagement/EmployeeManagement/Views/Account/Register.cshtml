@@ -1,0 +1,64 @@
+﻿@model RegisterViewModel
+
+@{ 
+    ViewBag.Title = "User Registration";
+}
+<div class="container">
+    <h1>User Registration</h1>
+
+    <div class="row pb-5">
+        <div class="col-md-12">
+            <form method="post">
+                <div class="text-danger" asp-validation-summary="All"></div>
+
+                <div class="form-group">
+                    <label asp-for="FullName"></label>
+                    <input class="form-control" asp-for="FullName" placeholder="Enter FullName" />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="DateOfBirth"></label>
+                    <input class="form-control" asp-for="DateOfBirth" placeholder="ddmmyyyy" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="MaritalStatus" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <select asp-for="MaritalStatus" class="custom-select mr-sm-2"
+                                asp-items="Html.GetEnumSelectList<Reg>()">
+                            <option value="">Please Select</option>
+                        </select>
+                        <span asp-validation-for="MaritalStatus" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input class="form-control" asp-for="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword"></label>
+                    <input class="form-control" asp-for="ConfirmPassword" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="City"></label>
+                    <input class="form-control" asp-for="City" />
+                </div>
+
+                <button type="submit" class="button">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
