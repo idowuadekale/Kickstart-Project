@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\EmployeeManagement",
+    "\\EmployeeManagement\\EmployeeManagement",
+    "\\EmployeeManagement\\EmployeeManagement\\Views",
+    "\\EmployeeManagement\\EmployeeManagement\\Views\\Shared"
+  ],
+  "SelectedNode": "\\EmployeeManagement\\EmployeeManagement\\Views\\Shared\\_Layout.cshtml",
+  "PreviewInSolutionExplorer": false
+}
